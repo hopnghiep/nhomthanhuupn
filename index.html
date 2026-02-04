@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NHÓM THÂN HỬU PHÚ NHUẬN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <style>
+      :root {
+        --color-background-primary: #f9fafb;
+        --color-background-secondary: #ffffff;
+        --color-background-tertiary: #f3f4f6;
+        --color-background-tertiary-hover: #e5e7eb;
+        --color-text-primary: #1f2937;
+        --color-text-secondary: #6b7280;
+        --color-text-accent: #ffffff;
+        --color-border-primary: #d1d5db;
+        --font-family-sans: 'Inter', sans-serif;
+        --font-family-serif: 'Lora', serif;
+        --font-family-mono: 'Roboto', sans-serif;
+        --text-scale: 1;
+      }
+      
+      .theme-indigo { --color-primary-50: #eef2ff; --color-primary-100: #e0e7ff; --color-primary-200: #c7d2fe; --color-primary-300: #a5b4fc; --color-primary-400: #818cf8; --color-primary-500: #6366f1; --color-primary-600: #4f46e5; --color-primary-700: #4338ca; --color-primary-800: #3730a3; --color-primary-900: #312e81; }
+      .theme-teal { --color-primary-50: #f0fdfa; --color-primary-100: #ccfbf1; --color-primary-200: #99f6e4; --color-primary-300: #5eead4; --color-primary-400: #2dd4bf; --color-primary-500: #14b8a6; --color-primary-600: #0d9488; --color-primary-700: #0f766e; --color-primary-800: #115e59; --color-primary-900: #134e4a; }
+      .theme-rose { --color-primary-50: #fff1f2; --color-primary-100: #ffe4e6; --color-primary-200: #fecdd3; --color-primary-300: #fda4af; --color-primary-400: #fb7185; --color-primary-500: #f43f5e; --color-primary-600: #e11d48; --color-primary-700: #be123c; --color-primary-800: #9f1239; --color-primary-900: #881337; }
+      .theme-slate { --color-primary-50: #f8fafc; --color-primary-100: #f1f5f9; --color-primary-200: #e2e8f0; --color-primary-300: #cbd5e1; --color-primary-400: #94a3b8; --color-primary-500: #64748b; --color-primary-600: #475569; --color-primary-700: #334155; --color-primary-800: #1e293b; --color-primary-900: #0f172a; }
+      .theme-green { --color-primary-50: #f0fdf4; --color-primary-100: #dcfce7; --color-primary-200: #bbf7d0; --color-primary-300: #86efac; --color-primary-400: #4ade80; --color-primary-500: #22c55e; --color-primary-600: #16a34a; --color-primary-700: #15803d; --color-primary-800: #166534; --color-primary-900: #14532d; }
+      
+      .dark {
+        --color-background-primary: #111827;
+        --color-background-secondary: #1f2937;
+        --color-background-tertiary: #374151;
+        --color-text-primary: #f3f4f6;
+        --color-text-secondary: #9ca3af;
+        --color-border-primary: #374151;
+        --color-shadow: rgba(0, 0, 0, 0.5);
+      }
+
+      .contrast {
+        --color-background-primary: #000000;
+        --color-background-secondary: #000000;
+        --color-text-primary: #ffffff;
+        --color-text-secondary: #dddddd;
+        --color-border-primary: #ffffff;
+      }
+
+      body { font-size: calc(1rem * var(--text-scale)); }
+      .font-inter { font-family: var(--font-family-sans); }
+      .font-lora { font-family: var(--font-family-serif); }
+      .font-roboto { font-family: var(--font-family-mono); }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "@google/genai": "https://esm.sh/@google/genai@1.2.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: {
+                primary: 'var(--color-background-primary)',
+                secondary: 'var(--color-background-secondary)',
+                tertiary: 'var(--color-background-tertiary)',
+                'tertiary-hover': 'var(--color-background-tertiary-hover)',
+              },
+              text: {
+                primary: 'var(--color-text-primary)',
+                secondary: 'var(--color-text-secondary)',
+                accent: 'var(--color-text-accent)',
+              },
+              border: {
+                primary: 'var(--color-border-primary)',
+              },
+              primary: {
+                50: 'var(--color-primary-50)', 100: 'var(--color-primary-100)', 200: 'var(--color-primary-200)', 300: 'var(--color-primary-300)', 400: 'var(--color-primary-400)', 500: 'var(--color-primary-500)', 600: 'var(--color-primary-600)', 700: 'var(--color-primary-700)', 800: 'var(--color-primary-800)', 900: 'var(--color-primary-900)',
+              }
+            }
+          }
+        }
+      }
+    </script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-background-primary">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
